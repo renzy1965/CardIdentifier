@@ -193,5 +193,5 @@ def main():
                 
             display_results(class_name, confidence, all_predictions)
 
-if _name_ == "_main_":
+if _name_ == "__main__":
     main()
