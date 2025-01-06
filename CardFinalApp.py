@@ -79,13 +79,13 @@ CLASS_NAMES = [
 @st.cache_resource(show_spinner=False)
 def load_model():
     try:
-        model_path = '/content/best_model.keras'
+        model_path = 'models/card_recognition_model.keras'
         if not os.path.exists('models'):
             os.makedirs('models')
 
         if not os.path.exists(model_path):
             with st.spinner('Downloading model... Please wait.'):
-                model_url = "https://drive.google.com/file/d/1jfV3PIz2dR0_LKEgHZO2cbvRZtFWx65K/view?usp=drive_link"
+                model_url = "https://drive.google.com/file/d/1jfV3PIz2dR0_LKEgHZO2cbvRZtFWx65K/view?usp=sharing"
                 gdown.download(model_url, output=model_path, quiet=True)
 
         return tf.keras.models.load_model(model_path)
