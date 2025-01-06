@@ -79,7 +79,7 @@ CLASS_NAMES = [
 @st.cache_resource(show_spinner=False)
 def load_model():
     try:
-        model_path = 'models/card_recognition_model.keras'
+        model_path = '/content/best_model.keras'
         if not os.path.exists('models'):
             os.makedirs('models')
 
